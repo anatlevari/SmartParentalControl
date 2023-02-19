@@ -1,0 +1,23 @@
+{
+  "name": "smart-parental-control-2",
+  "version": "0.1.0",
+  "description": "Pistol and weapon detection using YOLOv5 and tfjs in a chrome extension (v3)",
+  "scripts": {
+    "copy": "mkdir -p dist/src && cp src/content.js dist/src/ && cp -r pistol_web_model dist/ && cp -r weapons_web_model dist/",
+    "build": "parcel build src/service_worker.js --dist-dir dist/src/ && npm run copy",
+    "watch": "npm run copy && parcel watch src/service_worker.js --dist-dir dist/src/"
+  },
+  "license": "Apache 2.0",
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "clang-format": "^1.2.3",
+    "parcel": "^2.3.2",
+    "process": "^0.11.10"
+  },
+  "resolutions": {
+    "node-fetch": "2.6.7"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^3.13.0"
+  }
+}

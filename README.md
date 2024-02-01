@@ -1,4 +1,4 @@
-## Smart Parental Control Chrome Extension
+# Smart Parental Control Chrome Extension
 
 ## Project Overview
 
